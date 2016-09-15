@@ -1,0 +1,39 @@
+{
+  "name": "sound-rebuild",
+  "version": "2016.9.12",
+  "description": "bms player.",
+  "main": "build/main/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/underdolphin/SoundRebuild.git"
+  },
+  "keywords": [
+    "bms",
+    "game",
+    "electron",
+    "typescript"
+  ],
+  "author": "underdolphin (masato sueda)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/underdolphin/SoundRebuild/issues"
+  },
+  "homepage": "https://github.com/underdolphin/SoundRebuild#readme",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "electron": "^1.4.0",
+    "electron-connect": "^0.5.0",
+    "electron-packager": "^8.0.0",
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-prettydiff": "^1.0.1",
+    "gulp-stylus": "^2.5.0",
+    "gulp-typescript": "^2.13.6",
+    "require-dir": "^0.3.0",
+    "typescript": "^1.8.10"
+  }
+}
