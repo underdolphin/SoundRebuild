@@ -4,6 +4,7 @@
   "globalDependencies": {
     "clean-css": "registry:dt/clean-css#3.4.9+20160316155526",
     "electron-packager": "registry:dt/electron-packager#5.1.0+20160316155526",
+    "express": "registry:dt/express#4.0.0+20160708185218",
     "github-electron": "registry:dt/github-electron#1.3.4+20160831020201",
     "gulp": "registry:dt/gulp#3.8.0+20160907112908",
     "gulp-htmlmin": "registry:dt/gulp-htmlmin#1.3.0+20160316155526",

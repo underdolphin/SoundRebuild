@@ -38,6 +38,7 @@
     "typescript": "^1.8.10"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "systemjs": "^0.19.38",
     "vue": "^1.0.26"
   }
