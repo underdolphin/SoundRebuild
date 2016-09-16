@@ -73,7 +73,6 @@ gulp.task('watch', () => {
 gulp.task('electron', ['watch'], () => {
     electron.start();
     gulp.watch('main.js', electron.restart);
-    gulp.watch
 });
 
 gulp.task("default",['html','css','js','serve','watch']);
