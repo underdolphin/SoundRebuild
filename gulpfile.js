@@ -16,6 +16,7 @@
 
 const electron = require('electron-connect').server.create();
 const gulp = require('gulp');
+const cleancss = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
 const plumber = require('gulp-plumber');
 const stylus = require('gulp-stylus');
@@ -37,6 +38,7 @@ gulp.task('css', () => {
     gulp.src('src/**/*.styl')
         .pipe(plumber())
         .pipe(stylus())
+        .pipe(cleancss())
         .pipe(gulp.dest('./build/'));
 })
 
