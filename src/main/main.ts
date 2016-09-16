@@ -1,10 +1,7 @@
 /// <reference path="../../typings/index.d.ts" />
 
-import electron = require('electron');
-
-const {app} = electron;
-
-const {BrowserWindow} = electron;
+import {app,BrowserWindow} from 'electron';
+const client = require('electron-connect').client;
 
 let win: Electron.BrowserWindow = null;
 
@@ -18,6 +15,8 @@ function createWindow() {
     win.on('closed', () => {
         win = null;
     });
+
+    client.create(win);
 }
 
 app.on('ready', createWindow);
