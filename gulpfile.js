@@ -38,9 +38,9 @@ gulp.task('css', () => {
         .pipe(stylus())
         .pipe(cleancss())
         .pipe(gulp.dest('./build/'));
-})
+});
 
-gulp.task('js', () => {
+gulp.task('js:main', () => {
     const project = typescript('tsconfig.json', {
         typescript: require('typescript')
     });
@@ -52,7 +52,22 @@ gulp.task('js', () => {
             lang: 'js',
             mode: 'minify',
         }))
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('./build/main'));
+});
+
+gulp.task('js:renderer', () => {
+    const project = typescript('tsconfig.json', {
+        typescript: require('typescript')
+    });
+
+    gulp.src('src/**/*.ts')
+        .pipe(plumber())
+        .pipe(typescript(project))
+        .pipe(prettydiff({
+            lang: 'js',
+            mode: 'minify',
+        }))
+        .pipe(gulp.dest('./build/renderer'));
 });
 
 gulp.task('serve', () => {
@@ -64,7 +79,8 @@ gulp.task('serve', () => {
 gulp.task('watch', () => {
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/**/*.styl', ['css']);
-    gulp.watch('src/**/*.ts', ['js']);
+    gulp.watch('src/main/**/*.ts', ['js:main']);
+    gulp.watch('src/renderer/**/*.ts', ['js:renderer']);
 });
 
 gulp.task('restart:electron', (done) => {
