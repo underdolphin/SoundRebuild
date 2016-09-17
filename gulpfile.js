@@ -14,7 +14,7 @@
 
 /// <reference path="typings/index.d.ts" />
 
-const Electron = require('electron-connect').server;
+const electron = require('electron-connect').server.create();
 const gulp = require('gulp');
 const cleancss = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
@@ -22,8 +22,6 @@ const plumber = require('gulp-plumber');
 const stylus = require('gulp-stylus');
 const prettydiff = require('gulp-prettydiff');
 const typescript = require('gulp-typescript');
-
-const process = require('child_process');
 
 gulp.task('html', () => {
     gulp.src('src/**/*.html')
@@ -58,17 +56,25 @@ gulp.task('js', () => {
 });
 
 gulp.task('serve', () => {
-    const electron = Electron.create();
     electron.start();
-    gulp.watch('build/main/**/**.js',electron.restart)
-    gulp.watch(['build/**/**.html','build/**/**.css','build/renderer/**/**.js'],electron.reload)
+    gulp.watch('build/main/**/**.js', ['restart:electron']);
+    gulp.watch(['build/**/**.html', 'build/**/**.css', 'build/renderer/**/**.js'], ['reload:renderer'])
 })
 
 gulp.task('watch', () => {
-
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/**/*.styl', ['css']);
     gulp.watch('src/**/*.ts', ['js']);
 });
 
-gulp.task("default",['html','css','js','serve','watch']);
+gulp.task('restart:electron', (done) => {
+    electron.restart();
+    done();
+});
+
+gulp.task('reload:renderer', (done) => {
+    electron.reload();
+    done();
+});
+
+gulp.task("default", ['watch','serve']);
