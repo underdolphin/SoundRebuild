@@ -45,7 +45,7 @@ gulp.task('js:main', () => {
         typescript: require('typescript')
     });
 
-    gulp.src('src/**/*.ts')
+    gulp.src('src/main/**/*.ts')
         .pipe(plumber())
         .pipe(typescript(project))
         .pipe(prettydiff({
@@ -60,7 +60,7 @@ gulp.task('js:renderer', () => {
         typescript: require('typescript')
     });
 
-    gulp.src('src/**/*.ts')
+    gulp.src('src/renderer/**/*.ts')
         .pipe(plumber())
         .pipe(typescript(project))
         .pipe(prettydiff({
