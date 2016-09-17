@@ -22,8 +22,13 @@ import * as path from 'path';
 const exapp = express();
 const port = 3000;
 
-exapp.use(express.static(path.join(__dirname,'../renderer')));
-let server = exapp.listen(port,() => {
+exapp.use(express.static(path.join(__dirname, '../renderer')));
+
+exapp.use('/vue.js',express.static('node_modules/vue/dist/vue.min.js'));
+
+exapp.use('/system.js',express.static('node_modules/systemjs/dist/system-csp-production.js'));
+
+let server = exapp.listen(port, () => {
     console.log(`app listening`);
 });
 
