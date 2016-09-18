@@ -24,9 +24,9 @@ const port = 3000;
 
 exapp.use(express.static(path.join(__dirname, '../renderer')));
 
-exapp.use('/vue.js',express.static('node_modules/vue/dist/vue.min.js'));
+exapp.use('/vue.js', express.static('node_modules/vue/dist/vue.min.js'));
 
-exapp.use('/system.js',express.static('node_modules/systemjs/dist/system-csp-production.js'));
+exapp.use('/system.js', express.static('node_modules/systemjs/dist/system.js'));
 
 let server = exapp.listen(port, () => {
     console.log(`app listening`);
@@ -37,7 +37,10 @@ let win: Electron.BrowserWindow = null;
 function createWindow() {
     win = new BrowserWindow({
         width: 800,
-        height: 600
+        height: 600,
+        webPreferences: {
+            nodeIntegration: false
+        }
     });
 
     win.loadURL(`http://localhost:${port}`);
