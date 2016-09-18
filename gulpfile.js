@@ -23,6 +23,10 @@ const stylus = require('gulp-stylus');
 const prettydiff = require('gulp-prettydiff');
 const typescript = require('gulp-typescript');
 
+const project = typescript.createProject('tsconfig.json', {
+    typescript: require('typescript')
+});
+
 gulp.task('html', () => {
     gulp.src('src/**/*.html')
         .pipe(plumber())
@@ -41,9 +45,6 @@ gulp.task('css', () => {
 });
 
 gulp.task('js:main', () => {
-    const project = typescript('tsconfig.json', {
-        typescript: require('typescript')
-    });
 
     gulp.src('src/main/**/*.ts')
         .pipe(plumber())
@@ -56,9 +57,6 @@ gulp.task('js:main', () => {
 });
 
 gulp.task('js:renderer', () => {
-    const project = typescript('tsconfig.json', {
-        typescript: require('typescript')
-    });
 
     gulp.src('src/renderer/**/*.ts')
         .pipe(plumber())
@@ -93,4 +91,4 @@ gulp.task('reload:renderer', (done) => {
     done();
 });
 
-gulp.task("default", ['watch','serve']);
+gulp.task("default", ['watch', 'serve']);
