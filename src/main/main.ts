@@ -43,6 +43,8 @@ function createWindow() {
         }
     });
 
+    win.webContents.openDevTools();
+
     win.loadURL(`http://localhost:${port}`);
 
     win.on('closed', () => {
