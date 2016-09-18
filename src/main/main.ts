@@ -14,7 +14,7 @@
 
 /// <reference path="../../typings/index.d.ts" />
 
-import {app, BrowserWindow} from 'electron';
+import {app, BrowserWindow, session} from 'electron';
 const client = require('electron-connect').client;
 
 import * as express from 'express';
@@ -48,6 +48,7 @@ function createWindow() {
     win.loadURL(`http://localhost:${port}`);
 
     win.on('closed', () => {
+        session.defaultSession.clearCache(() => {});
         win = null;
     });
 
