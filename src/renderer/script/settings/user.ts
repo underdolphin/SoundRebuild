@@ -14,20 +14,3 @@
 
 /// <reference path="../../../../typings/index.d.ts" />
 
-import * as vue from 'vue';
-
-/**
- * Settings
- */
-class Settings extends vue {
-    constructor() {
-        super();
-
-        this._init({
-            el: '#content',
-            
-        })
-    }
-}
-
-export const settings = new Settings();
