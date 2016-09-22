@@ -7,5 +7,3 @@ System.config({
         settings: 'script/settings'
     },
 });
-
-System.import('settings/main');
