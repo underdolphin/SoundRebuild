@@ -20,28 +20,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Sound Rebuild</title>
+    <script src="/bower/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="/bower/iron-icons/iron-icons.html">
+    <link rel="import" href="/bower/paper-header-panel/paper-header-panel.html">
+    <link rel="import" href="/bower/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="/bower/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="/bower/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="/bower/paper-menu/paper-menu.html">
+    <link rel="import" href="/bower/paper-item/paper-item.html">
+    <link rel="import" href="./view/settings.html">
     <link rel="stylesheet" href="stylus/main.css">
 </head>
 
-<body>
-    <div id="menu">
-        <nav>
-            <div class="menu-title">
-                <li><a>Settings</a></li>
+<body unresolve>
+    <paper-drawer-panel force-narrow>
+        <paper-header-panel drawer>
+            <paper-toolbar>
+                <div>Settings</div>
+            </paper-toolbar>
+            <nav>
+                <a class="paper-item-link">
+                    <paper-item>
+                        User<paper-ripple></paper-ripple>
+                    </paper-item>
+                </a>
+                <a class="paper-item-link">
+                    <paper-item>
+                        Theme<paper-ripple></paper-ripple>
+                    </paper-item>
+                </a>
+                <a class="paper-item-link">
+                    <paper-item>
+                        Songs<paper-ripple></paper-ripple>
+                    </paper-item>
+                </a>
+                <a class="paper-item-link">
+                    <paper-item>
+                        Output<paper-ripple></paper-ripple>
+                    </paper-item>
+                </a>
+            </nav>
+        </paper-header-panel>
+        <paper-header-panel main>
+            <paper-toolbar>
+                <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                <span class="title">Settings</span>
+            </paper-toolbar>
+            <div>
+                <settings-element></settings-element>
             </div>
-            <div class="menu-index">
-                <li><a>Menu1</a></li>
-                <li><a>Menu1</a></li>
-            </div>
-            <div class="about-app">
-                <li><a>About this</a></li>
-            </div>
-        </nav>
-    </div>
-    <div id="settings-cover"></div>
-    <header id="header">
-
-    </header>
+        </paper-header-panel>
+    </paper-drawer-panel>
     <script src="system.js"></script>
     <script src="script/systemconfig.js"></script>
 </body>
