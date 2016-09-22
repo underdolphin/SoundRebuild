@@ -13,16 +13,3 @@
 //    limitations under the License.
 
 /// <reference path="../../../../typings/index.d.ts" />
-
-import * as vue from 'vue';
-
-/**
- * Settings
- */
-class Settings extends vue {
-    constructor() {
-        super();
-    }
-}
-
-export const settings = new Settings();
