@@ -40,6 +40,9 @@ typings
 app
 build
 
+# Bower directories
+bower_components
+
 # =========================
 # Operating System Files
 # =========================
