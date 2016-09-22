@@ -24,9 +24,9 @@ const port = 3000;
 
 exapp.use(express.static(path.join(__dirname, '../renderer')));
 
-exapp.use('/vue.js', express.static('node_modules/vue/dist/vue.min.js'));
-
 exapp.use('/system.js', express.static('node_modules/systemjs/dist/system.js'));
+
+exapp.use('/bower',express.static('bower_components'));
 
 let server = exapp.listen(port, () => {
     console.log(`app listening`);
