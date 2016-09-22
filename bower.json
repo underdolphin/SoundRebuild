@@ -1,0 +1,23 @@
+{
+  "name": "sound-rebuild",
+  "description": "bms player.",
+  "main": "build/main/main.js",
+  "authors": [
+    "underdolphin (masato sueda)"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "bms",
+    "game",
+    "electron",
+    "typescript"
+  ],
+  "homepage": "https://github.com/underdolphin/SoundRebuild",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
