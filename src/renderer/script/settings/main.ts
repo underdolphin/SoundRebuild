@@ -22,11 +22,6 @@ import * as vue from 'vue';
 class Settings extends vue {
     constructor() {
         super();
-
-        this._init({
-            el: '#content',
-            
-        })
     }
 }
 
