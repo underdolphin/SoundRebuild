@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "express": "^4.14.0",
-    "systemjs": "^0.19.38",
-    "vue": "^1.0.26",
-    "vue-class-component": "^4.0.0"
+    "material-design-lite": "^1.2.1",
+    "polymer": "^0.5.0",
+    "systemjs": "^0.19.38"
   }
 }
