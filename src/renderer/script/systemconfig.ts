@@ -8,5 +8,4 @@ System.config({
     },
 });
 
-System.import('vue');
 System.import('settings/main');
