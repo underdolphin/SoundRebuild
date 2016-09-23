@@ -36,8 +36,8 @@ let win: Electron.BrowserWindow = null;
 
 function createWindow() {
     win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1280,
+        height: 720,
         webPreferences: {
             nodeIntegration: false
         }
