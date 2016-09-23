@@ -15,16 +15,75 @@
 -->
 
 <link rel="import" href="/bower/polymer/polymer.html">
-<link rel="import" href="/bower/iron-icons/iron-icons.html">
-<link rel="import" href="/bower/paper-header-panel/paper-header-panel.html">
-<link rel="import" href="/bower/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="/bower/paper-menu/paper-menu.html">
-<link rel="import" href="/bower/paper-item/paper-item.html">
+<link rel="import" href="/bower/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="/bower/paper-material/paper-material.html">
+<link rel="import" href="/bower/paper-item/paper-item.html">]
+<link rel="import" href="/bower/paper-menu/paper-menu.html">
+<link rel="import" href="/bower/paper-menu/paper-submenu.html">
+<link rel="import" href="./users.html">
 
 <dom-module id="settings-element">
     <template>
-        <p></p>
+        <style>
+            .container {
+                width: 70%;
+                margin: 10px auto;
+            }
+            .item {
+                margin : 10px 0px 10px 0px;
+            }
+        </style>
+        <div class="layout vertical container">
+            <div class="item">
+                <div>
+                    User
+                    <paper-material elevation="2" style="background-color : white;">
+                        <paper-menu>
+                            <paper-item>
+                                UserName
+                            </paper-item>
+                            <paper-item>
+                                UserData
+                            </paper-item>
+                        </paper-menu>
+                    </paper-material>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    Theme
+                    <paper-material elevation="2" style="background-color : white;">Theme</paper-material>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    Songs
+                    <paper-material elevation="2" style="background-color : white;">
+                        <paper-menu>
+                            <paper-item>
+                                Search Directories
+                            </paper-item>
+                        </paper-menu>
+                    </paper-material>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    Option
+                    <paper-material elevation="2" style="background-color : white;">
+                        <paper-menu>
+                            <paper-submenu label="window">
+                                <paper-item class="menu-trigger">Window</paper-item>
+                                <paper-menu class="menu-content sublist">
+                                    <paper-item>Mode</paper-item>
+                                    <paper-item>Size</paper-item>
+                                </paper-menu>
+                            </paper-submenu>
+                        </paper-menu>
+                    </paper-material>
+                </div>
+            </div>
+        </div>
     </template>
     <script src="/script/settings.js"></script>
 </dom-module>
