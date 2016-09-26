@@ -22,14 +22,13 @@
 画面表示の方法やサウンド出力の方法の指定
 
 * Window
-1. Size : ウィンドウサイズの指定
-1. Mode : フルスクリーン表示するか否か
+ 1. Size : ウィンドウサイズの指定
+ 1. Mode : フルスクリーン表示するか否か
 
 * Sound
-1. Master Volume : 
-1. Output : 出力デバイスの確定(とりあえずWebAudioAPIを想定)
+ 1. Master Volume : 
+ 1. Output : 出力デバイスの確定(とりあえずWebAudioAPIを想定)
 
 * Others
-
-1. Input : 入力デバイスの確定(キーボードとWebMIDIには対応）
-2. Key Config : 専用ページへ 
+ 1. Input : 入力デバイスの確定(キーボードとWebMIDIには対応）
+ 1. Key Config : 専用ページへ 
