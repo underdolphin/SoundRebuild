@@ -28,7 +28,7 @@
     "electron-connect": "^0.6.0",
     "electron-packager": "^8.0.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.12",
+    "gulp-clean-css": "^2.0.13",
     "gulp-htmlmin": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-prettydiff": "^1.0.1",
@@ -40,6 +40,6 @@
   "dependencies": {
     "express": "^4.14.0",
     "material-design-lite": "^1.2.1",
-    "systemjs": "^0.19.38"
+    "systemjs": "^0.19.39"
   }
 }
