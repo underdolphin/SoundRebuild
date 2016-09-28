@@ -1,0 +1,114 @@
+<!--
+    Copyright 2016 underdolphin(masato sueda)
+ 
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+ 
+        http://www.apache.org/licenses/LICENSE-2.0
+ 
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<link rel="import" href="/bower/polymer/polymer.html">
+<link rel="import" href="/bower/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="/bower/paper-material/paper-material.html">
+<link rel="import" href="/bower/paper-item/paper-item.html">]
+<link rel="import" href="/bower/paper-menu/paper-menu.html">
+<link rel="import" href="./users.html">
+<link rel="import" href="/bower/paper-menu/paper-submenu.html">
+
+<dom-module id="settings-element">
+    <template>
+        <style>
+            .container {
+                width: 70%;
+                margin: 10px auto;
+            }
+            .item {
+                margin : 10px 0px 10px 0px;
+            }
+        </style>
+        <div class="layout vertical container">
+            <div class="item">
+                <div>
+                    User
+                    <paper-material elevation="2" style="background-color : white;">
+                        <paper-menu>
+                            <paper-item>
+                                UserName
+                            </paper-item>
+                            <paper-item>
+                                UserData
+                            </paper-item>
+                        </paper-menu>
+                    </paper-material>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    Theme
+                    <paper-material elevation="2" style="background-color : white;">
+                        <paper-menu>
+                            <paper-item>LR2 Style</paper-item>
+                            <paper-item>Encoding</paper-item>
+                        </paper-menu>
+                    </paper-material>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    Songs
+                    <paper-material elevation="2" style="background-color : white;">
+                        <paper-menu>
+                            <paper-item>
+                                Directories
+                            </paper-item>
+                            <paper-item>Files</paper-item>
+                            <paper-item>Encoding</paper-item>
+                        </paper-menu>
+                    </paper-material>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    Option
+                    <paper-material elevation="2" style="background-color : white;">
+                        <paper-menu>
+                            <paper-submenu label="window">
+                                <paper-item class="menu-trigger">Window</paper-item>
+                                <paper-menu class="menu-content sublist">
+                                    <paper-item>Mode</paper-item>
+                                    <paper-item>Size</paper-item>
+                                </paper-menu>
+                            </paper-submenu>
+                        </paper-menu>
+                        <paper-menu>
+                            <paper-submenu label="sound">
+                                <paper-item class="menu-trigger">Sound</paper-item>
+                                <paper-menu class="menu-content sublist">
+                                    <paper-item>Master Volume</paper-item>
+                                    <paper-item>Output</paper-item>
+                                </paper-menu>
+                            </paper-submenu>
+                        </paper-menu>
+                        <paper-menu>
+                            <paper-submenu label="sound">
+                                <paper-item class="menu-trigger">Others</paper-item>
+                                <paper-menu class="menu-content sublist">
+                                    <paper-item>Input</paper-item>
+                                    <paper-item>Key Config</paper-item>
+                                </paper-menu>
+                            </paper-submenu>
+                        </paper-menu>
+                    </paper-material>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="/script/settings/settings.js"></script>
+</dom-module>
