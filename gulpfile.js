@@ -48,7 +48,7 @@ gulp.task('js:main', () => {
 
     gulp.src('src/main/**/*.ts')
         .pipe(plumber())
-        .pipe(typescript(project))
+        .pipe(project())
         .pipe(prettydiff({
             lang: 'js',
             mode: 'minify',
@@ -60,7 +60,7 @@ gulp.task('js:renderer', () => {
 
     gulp.src('src/renderer/**/*.ts')
         .pipe(plumber())
-        .pipe(typescript(project))
+        .pipe(project())
         .pipe(prettydiff({
             lang: 'js',
             mode: 'minify',
