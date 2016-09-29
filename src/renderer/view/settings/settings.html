@@ -17,7 +17,7 @@
 <link rel="import" href="/bower/polymer/polymer.html">
 <link rel="import" href="/bower/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="/bower/paper-material/paper-material.html">
-<link rel="import" href="/bower/paper-item/paper-item.html">]
+<link rel="import" href="/bower/paper-item/paper-item.html">
 <link rel="import" href="/bower/paper-menu/paper-menu.html">
 <link rel="import" href="./option.html">
 <link rel="import" href="./songs.html">
@@ -30,80 +30,10 @@
 <dom-module id="settings-element">
     <template>
         <div class="layout vertical container">
-            <div class="item">
-                <div>
-                    User
-                    <paper-material elevation="2" style="background-color : white;">
-                        <paper-menu>
-                            <paper-item>
-                                UserName
-                            </paper-item>
-                            <paper-item>
-                                UserData
-                            </paper-item>
-                        </paper-menu>
-                    </paper-material>
-                </div>
-            </div>
-            <div class="item">
-                <div>
-                    Theme
-                    <paper-material elevation="2" style="background-color : white;">
-                        <paper-menu>
-                            <paper-item>LR2 Style</paper-item>
-                            <paper-item>Encoding</paper-item>
-                        </paper-menu>
-                    </paper-material>
-                </div>
-            </div>
-            <div class="item">
-                <div>
-                    Songs
-                    <paper-material elevation="2" style="background-color : white;">
-                        <paper-menu>
-                            <paper-item>
-                                Directories
-                            </paper-item>
-                            <paper-item>Files</paper-item>
-                            <paper-item>Encoding</paper-item>
-                        </paper-menu>
-                    </paper-material>
-                </div>
-            </div>
-            <div class="item">
-                <div>
-                    Option
-                    <paper-material elevation="2" style="background-color : white;">
-                        <paper-menu>
-                            <paper-submenu label="window">
-                                <paper-item class="menu-trigger">Window</paper-item>
-                                <paper-menu class="menu-content sublist">
-                                    <paper-item>Mode</paper-item>
-                                    <paper-item>Size</paper-item>
-                                </paper-menu>
-                            </paper-submenu>
-                        </paper-menu>
-                        <paper-menu>
-                            <paper-submenu label="sound">
-                                <paper-item class="menu-trigger">Sound</paper-item>
-                                <paper-menu class="menu-content sublist">
-                                    <paper-item>Master Volume</paper-item>
-                                    <paper-item>Output</paper-item>
-                                </paper-menu>
-                            </paper-submenu>
-                        </paper-menu>
-                        <paper-menu>
-                            <paper-submenu label="sound">
-                                <paper-item class="menu-trigger">Others</paper-item>
-                                <paper-menu class="menu-content sublist">
-                                    <paper-item>Input</paper-item>
-                                    <paper-item>Key Config</paper-item>
-                                </paper-menu>
-                            </paper-submenu>
-                        </paper-menu>
-                    </paper-material>
-                </div>
-            </div>
+            <user-element></user-element>
+            <theme-element></theme-element>
+            <songs-element></songs-element>
+            <option-element></option-element>
         </div>
     </template>
     <script src="/script/settings/settings.js"></script>
