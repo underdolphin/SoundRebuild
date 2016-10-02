@@ -12,8 +12,6 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-/// <reference path="../../typings/index.d.ts" />
-
 import {app, BrowserWindow, session} from 'electron';
 const client = require('electron-connect').client;
 
