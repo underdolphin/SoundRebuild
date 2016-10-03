@@ -40,6 +40,9 @@ build
 # Bower directories
 bower_components
 
+# Let's Encrypt directories
+letsencrypt
+
 # =========================
 # Operating System Files
 # =========================
