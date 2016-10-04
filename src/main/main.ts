@@ -12,7 +12,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-import {app, BrowserWindow, session} from 'electron';
+import { app, BrowserWindow, session } from 'electron';
 const client = require('electron-connect').client;
 
 import * as express from 'express';
