@@ -18,6 +18,7 @@
 <link rel="import" href="/bower/paper-material/paper-material.html">
 <link rel="import" href="/bower/paper-item/paper-item.html">
 <link rel="import" href="/bower/paper-menu/paper-menu.html">
+<link rel="import" href="/bower/paper-button/paper-button.html">
 <link rel="import" href="./option.html">
 <link rel="import" href="./songs.html">
 <link rel="import" href="./theme.html">
@@ -28,7 +29,18 @@
 
 <dom-module id="settings-element">
     <template>
+        <style>
+            a {
+                text-decoration: none;
+            }
+            paper-button {
+                background-color : white;
+            }
+        </style>
         <div class="layout vertical container">
+            <a href="/index.html" id="play">
+                <paper-button raised>Play</paper-button>
+            </a>
             <user-element></user-element>
             <theme-element></theme-element>
             <songs-element></songs-element>
