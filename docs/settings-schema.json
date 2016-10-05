@@ -1,61 +1,105 @@
 {
     "title": "Settings Schema",
-    "theme": {
-        "lr2": {
-            "directory": {
-                "type": "string"
-            },
-            "defaultEncoding": {
-                "type": "string"
+    "type": "object",
+    "properties": {
+        "theme": {
+            "type": "object",
+            "properties": {
+                "lr2": {
+                    "type": "object",
+                    "properties": {
+                        "directory": {
+                            "type": "string"
+                        },
+                        "defaultEncoding": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        }
+                    }
+                },
+                "resound": {
+                    "type": "object",
+                    "properties": {
+                        "directory": {
+                            "type": "string"
+                        },
+                        "defaultEncoding": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        }
+                    }
+                }
             }
         },
-        "resound": {
-            "directory": {
-                "type": "string"
-            },
-            "defaultEncoding": {
-                "type": "string"
+        "songs": {
+            "type": "object",
+            "properties": {
+                "directories": {
+                    "type": "array"
+                },
+                "files": {
+                    "type": "array"
+                },
+                "encoding": {
+                    "type": "object",
+                    "properties": {
+                        "likeBms": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        },
+                        "resound": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "option": {
+            "type": "object",
+            "properties": {
+                "window-size": {
+                    "type": "object",
+                    "properties": {
+                        "width": {
+                            "type": "integer"
+                        },
+                        "height": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "window-mode": [
+                    "fullscreen",
+                    "window"
+                ],
+                "volume": {
+                    "type": "integer"
+                },
+                "output": [
+                    "WebAudio"
+                ],
+                "input": [
+                    "Keyboard",
+                    "WebMidi"
+                ]
             }
         }
-    },
-    "songs": {
-        "directories": {
-            "type": "array"
-        },
-        "files": {
-            "type": "array"
-        },
-        "encoding": {
-            "likeBms": {
-                "type": "string"
-            },
-            "resound": {
-                "type": "string"
-            }
-        }
-    },
-    "option": {
-        "window-size": {
-            "width": {
-                "type": "integer"
-            },
-            "height": {
-                "type": "integer"
-            }
-        },
-        "window-mode": [
-            "fullscreen",
-            "window"
-        ],
-        "volume": {
-            "type": "integer"
-        },
-        "output": [
-            "WebAudio"
-        ],
-        "input" : [
-            "Keyboard",
-            "WebMidi"
-        ]
     }
 }
