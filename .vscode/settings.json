@@ -1,0 +1,11 @@
+// 既定の設定とユーザー設定を上書きするには、このファイル内に設定を挿入します
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/**/*.settings.json"
+            ],
+            "url": "./docs/settings-schema.json"
+        }
+    ]
+}
