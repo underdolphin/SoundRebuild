@@ -1,0 +1,61 @@
+{
+    "title": "Settings Schema",
+    "theme": {
+        "lr2": {
+            "directory": {
+                "type": "string"
+            },
+            "defaultEncoding": {
+                "type": "string"
+            }
+        },
+        "resound": {
+            "directory": {
+                "type": "string"
+            },
+            "defaultEncoding": {
+                "type": "string"
+            }
+        }
+    },
+    "songs": {
+        "directories": {
+            "type": "array"
+        },
+        "files": {
+            "type": "array"
+        },
+        "encoding": {
+            "likeBms": {
+                "type": "string"
+            },
+            "resound": {
+                "type": "string"
+            }
+        }
+    },
+    "option": {
+        "window-size": {
+            "width": {
+                "type": "integer"
+            },
+            "height": {
+                "type": "integer"
+            }
+        },
+        "window-mode": [
+            "fullscreen",
+            "window"
+        ],
+        "volume": {
+            "type": "integer"
+        },
+        "output": [
+            "WebAudio"
+        ],
+        "input" : [
+            "Keyboard",
+            "WebMidi"
+        ]
+    }
+}
