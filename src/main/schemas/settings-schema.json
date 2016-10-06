@@ -74,7 +74,7 @@
         "option": {
             "type": "object",
             "properties": {
-                "window-size": {
+                "windowSize": {
                     "type": "object",
                     "properties": {
                         "width": {
@@ -85,7 +85,7 @@
                         }
                     }
                 },
-                "window-mode": {
+                "windowMode": {
                     "type": "string",
                     "enum" : [
                         "fullscreen",
