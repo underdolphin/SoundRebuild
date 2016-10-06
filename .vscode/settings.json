@@ -5,7 +5,7 @@
             "fileMatch": [
                 "/**/*.settings.json"
             ],
-            "url": "./docs/settings-schema.json"
+            "url": "./src/main/schemas/settings-schema.json"
         }
     ]
 }

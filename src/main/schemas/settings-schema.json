@@ -85,20 +85,30 @@
                         }
                     }
                 },
-                "window-mode": [
-                    "fullscreen",
-                    "window"
-                ],
+                "window-mode": {
+                    "type": "string",
+                    "enum" : [
+                        "fullscreen",
+                        "window"
+                    ]
+                },
                 "volume": {
                     "type": "integer"
                 },
-                "output": [
-                    "WebAudio"
-                ],
-                "input": [
-                    "Keyboard",
-                    "WebMidi"
-                ]
+                "output": {
+                    "type": "string",
+                    "enum" : [
+                        "WebAudioAPI"
+                    ]
+                },
+                "input": {
+                    "type": "string",
+                    "enum" : [
+                        "Keyboard",
+                        "WebMidi"
+                    ]
+                }
+                
             }
         }
     }
