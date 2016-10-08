@@ -13,9 +13,9 @@
             "resound": "UTF-8"
         }
     },
-    "option": {
-        "window-mode": "window",
-        "window-size": {
+    "options": {
+        "windowMode": "window",
+        "windowSize": {
             "height": 720,
             "width": 1280
         },

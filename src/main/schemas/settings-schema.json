@@ -71,7 +71,7 @@
                 }
             }
         },
-        "option": {
+        "options": {
             "type": "object",
             "properties": {
                 "windowSize": {

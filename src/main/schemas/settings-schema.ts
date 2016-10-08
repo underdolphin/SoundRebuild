@@ -36,7 +36,7 @@ namespace Schemas {
 
     class Options {
         public windowSize : WindowSize;
-        public WindowMode : string = "window";
+        public windowMode : string = "window";
         public volume : number = 100;
         public output : string = 'WebAudioAPI';
         public input : string = 'Keyboard';
