@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/underdolphin/SoundRebuild#readme",
   "devDependencies": {
+    "@types/body-parser": "0.0.33",
     "@types/clean-css": "^3.4.30",
     "@types/electron": "^1.4.24",
     "@types/electron-packager": "^5.1.29",
@@ -48,6 +49,7 @@
     "typescript": "^2.0.3"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "systemjs": "^0.19.39"
   }
