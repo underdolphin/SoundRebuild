@@ -13,7 +13,7 @@
 //    limitations under the License.
 
 import * as fs from 'fs';
-import SettingsSchema = Schemas.Settings;
+import {SettingsSchema} from '../../schemas/settings-schema';
 
 export class Settings {
     public defaultReader() {
