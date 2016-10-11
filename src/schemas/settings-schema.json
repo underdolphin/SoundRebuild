@@ -1,0 +1,115 @@
+{
+    "title": "Settings Schema",
+    "type": "object",
+    "properties": {
+        "theme": {
+            "type": "object",
+            "properties": {
+                "lr2": {
+                    "type": "object",
+                    "properties": {
+                        "directory": {
+                            "type": "string"
+                        },
+                        "defaultEncoding": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        }
+                    }
+                },
+                "resound": {
+                    "type": "object",
+                    "properties": {
+                        "directory": {
+                            "type": "string"
+                        },
+                        "defaultEncoding": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "songs": {
+            "type": "object",
+            "properties": {
+                "directories": {
+                    "type": "array"
+                },
+                "files": {
+                    "type": "array"
+                },
+                "encoding": {
+                    "type": "object",
+                    "properties": {
+                        "likeBms": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        },
+                        "resound": {
+                            "type" : "string",
+                            "enum": [
+                                "Shift-JIS",
+                                "UTF-8",
+                                "UTF-16"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "options": {
+            "type": "object",
+            "properties": {
+                "windowSize": {
+                    "type": "object",
+                    "properties": {
+                        "width": {
+                            "type": "integer"
+                        },
+                        "height": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "windowMode": {
+                    "type": "string",
+                    "enum" : [
+                        "fullscreen",
+                        "window"
+                    ]
+                },
+                "volume": {
+                    "type": "integer"
+                },
+                "output": {
+                    "type": "string",
+                    "enum" : [
+                        "WebAudioAPI"
+                    ]
+                },
+                "input": {
+                    "type": "string",
+                    "enum" : [
+                        "Keyboard",
+                        "WebMidi"
+                    ]
+                }
+                
+            }
+        }
+    }
+}
