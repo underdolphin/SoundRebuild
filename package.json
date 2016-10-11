@@ -24,7 +24,7 @@
   "homepage": "https://github.com/underdolphin/SoundRebuild#readme",
   "devDependencies": {
     "@types/clean-css": "^3.4.30",
-    "@types/electron": "^1.4.23",
+    "@types/electron": "^1.4.24",
     "@types/electron-packager": "^5.1.29",
     "@types/express": "^4.0.33",
     "@types/express-serve-static-core": "^4.0.37",
@@ -34,8 +34,8 @@
     "@types/gulp-typescript": "0.0.32",
     "@types/polymer": "^1.1.28",
     "@types/systemjs": "^0.19.31",
-    "browser-sync": "^2.17.0",
-    "electron": "^1.4.2",
+    "browser-sync": "^2.17.2",
+    "electron": "^1.4.3",
     "electron-connect": "^0.6.0",
     "electron-packager": "^8.1.0",
     "gulp": "^3.9.1",
@@ -45,7 +45,7 @@
     "gulp-prettydiff": "^1.0.1",
     "gulp-stylus": "^2.5.0",
     "gulp-typescript": "^3.0.2",
-    "require-dir": "^0.3.0",
+    "require-dir": "^0.3.1",
     "typescript": "^2.0.3"
   },
   "dependencies": {
