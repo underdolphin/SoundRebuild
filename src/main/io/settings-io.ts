@@ -15,7 +15,7 @@
 import * as fs from 'fs';
 import {SettingsSchema} from '../../schemas/settings-schema';
 
-export class Settings {
+export class SettingsIO {
     public defaultReader() {
         return JSON.parse(fs.readFileSync(`${process.cwd()}/build/assets/default.settings.json`, `utf-8`));
     }
