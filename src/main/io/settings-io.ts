@@ -21,7 +21,13 @@ export class SettingsIO {
     }
 
     public Reader() {
-        return JSON.parse(fs.readFileSync(`${process.cwd()}/build/assets/settings.json`, `utf-8`));
+        let jsonString : string;
+        try {
+            jsonString = fs.readFileSync(`${process.cwd()}/build/assets/settings.json`, `utf-8`);
+        } catch (error) {
+            jsonString = 'null';
+        }
+        return JSON.parse(jsonString);
     }
 
     public Writer(settings: JSON): void {
