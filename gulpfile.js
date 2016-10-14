@@ -91,4 +91,4 @@ gulp.task('reload:renderer', (done) => {
     done();
 });
 
-gulp.task("default", ['watch', 'serve']);
+gulp.task("default", ['js:main','js:renderer','watch', 'serve']);
