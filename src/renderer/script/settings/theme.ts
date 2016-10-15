@@ -12,6 +12,24 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+import electron = require("electron");
+
 Polymer({
-    is : "theme-element"
+    is: "theme-element",
+    directorySelect: () => {
+        const remote = electron.remote;
+        const dialog = remote.dialog;
+        const browserWindow = remote.BrowserWindow;
+        const focusedWindow = browserWindow.getFocusedWindow();
+
+        dialog.showOpenDialog(focusedWindow, {
+            title: 'SelectTheme',
+            properties: ['openDirectory']
+        }, (dir) => {
+            const fileLabel = document.getElementById('lr2_style_file_label') as HTMLInputElement;
+            if (dir != undefined) {
+                fileLabel.value = dir[0];
+            }
+        })
+    }
 });

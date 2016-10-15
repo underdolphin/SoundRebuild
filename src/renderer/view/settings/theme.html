@@ -18,33 +18,33 @@
 <link rel="import" href="/bower/paper-listbox/paper-listbox.html">
 
 <dom-module id="theme-element">
-    <template>
-        <div class="item">
-            Theme
-            <paper-material elevation="2" style="background-color : white;">
-                <paper-menu>
-                    <paper-item>
-                        <paper-item-body two-line>
-                            <div>LR2 Style</div>
-                            <div secondary>
-                                <paper-input label="Choose file">
-                                    <paper-icon-button suffix icon="file-upload"></paper-icon-button>
-                                </paper-input>
-                            </div>
-                        </paper-item-body>
-                    </paper-item>
-                    <paper-item>
-                        <paper-dropdown-menu label="File Encoding">
-                            <paper-listbox class="dropdown-content">
-                                <paper-item>Shift-JIS</paper-item>
-                                <paper-item>UTF-8</paper-item>
-                                <paper-item>UTF-16</paper-item>
-                            </paper-listbox>
-                        </paper-dropdown-menu>
-                    </paper-item>
-                </paper-menu>
-            </paper-material>
-        </div>
-    </template>
-    <script src="/script/settings/theme.js"></script>
+	<template>
+		<div class="item">
+			Theme
+			<paper-material elevation="2" style="background-color : white;">
+				<paper-menu>
+					<paper-item>
+						<paper-item-body two-line>
+							<div>LR2 Style</div>
+							<div secondary>
+								<paper-input label="Choose Directory" value="" id="lr2_style_file_label">
+									<paper-icon-button suffix icon="file-upload" id="directorySelect" on-click="directorySelect"></paper-icon-button>
+								</paper-input>
+							</div>
+						</paper-item-body>
+					</paper-item>
+					<paper-item>
+						<paper-dropdown-menu label="File Encoding">
+							<paper-listbox class="dropdown-content">
+								<paper-item>Shift-JIS</paper-item>
+								<paper-item>UTF-8</paper-item>
+								<paper-item>UTF-16</paper-item>
+							</paper-listbox>
+						</paper-dropdown-menu>
+					</paper-item>
+				</paper-menu>
+			</paper-material>
+		</div>
+	</template>
+	<script src="/script/settings/theme.js"></script>
 </dom-module>
