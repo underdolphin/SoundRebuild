@@ -15,19 +15,40 @@
 -->
 
 <dom-module id="songs-element">
-    <template>
-        <div class="item">
-            Songs
-            <paper-material elevation="2" style="background-color : white;">
-                <paper-menu>
-                    <paper-item>
-                        Directories
-                    </paper-item>
-                    <paper-item>Files</paper-item>
-                    <paper-item>Encoding</paper-item>
-                </paper-menu>
-            </paper-material>
-        </div>
-    </template>
-    <script src="/script/settings/songs.js"></script>
+	<template>
+		<div class="item">
+			Songs
+			<paper-material elevation="2" style="background-color : white;">
+				<paper-menu>
+                    <!--========== Start BMS Songs ==========-->
+					<paper-item>
+						<paper-item-body>
+							<div>BMS Songs</div>
+							<paper-item>
+								<paper-input label="Choose Directories" value="" id="bms_style_dirs_label">
+									<paper-icon-button suffix icon="file-upload" id="directorisSelect" on-click="directoriesSelect"></paper-icon-button>
+								</paper-input>
+							</paper-item>
+							<paper-item>
+								<paper-input label="Choose Songs" value="" id="bms_style_songs_label">
+									<paper-icon-button suffix icon="file-upload" id="songsSelect" on-click="songsSelect"></paper-icon-button>
+								</paper-input>
+							</paper-item>
+							<paper-item>
+								<paper-dropdown-menu label="File Encoding">
+									<paper-listbox class="dropdown-content">
+										<paper-item>Shift-JIS</paper-item>
+                                        <paper-item>UTF-8</paper-item>
+                                        <paper-item>UTF-16</paper-item>
+									</paper-listbox>
+								</paper-dropdown-menu>
+							</paper-item>
+						</paper-item-body>
+					</paper-item>
+                    <!--========== End BMS Songs ==========-->
+				</paper-menu>
+			</paper-material>
+		</div>
+	</template>
+	<script src="/script/settings/songs.js"></script>
 </dom-module>

@@ -12,6 +12,53 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+
+
 Polymer({
-    is: "songs-element"
+    is: "songs-element",
+    directoriesSelect: () => {
+        const electron = require('electron');
+        const remote = electron.remote;
+        const dialog = remote.dialog;
+        const browserWindow = remote.BrowserWindow;
+        const focusedWindow = browserWindow.getFocusedWindow();
+
+        dialog.showOpenDialog(focusedWindow, {
+            title: 'Select Songs Directories',
+            properties: ['openDirectory', 'multiSelections']
+        }, (dirs) => {
+            const fileLabel = document.getElementById('bms_style_dirs_label') as HTMLInputElement;
+            fileLabel.value = "";
+            dirs.forEach((dir) => {
+                fileLabel.value += dir + ',';
+            });
+        });
+    },
+    songsSelect: () => {
+        const electron = require('electron');
+        const remote = electron.remote;
+        const dialog = remote.dialog;
+        const browserWindow = remote.BrowserWindow;
+        const focusedWindow = browserWindow.getFocusedWindow();
+
+        dialog.showOpenDialog(focusedWindow, {
+            title: 'Select Songs Files',
+            properties: ['openFile', 'multiSelections'],
+            filters: [
+                { name: 'BMS', extensions: ['bms', 'bme', 'bml'] },
+                // In the future
+                /*
+                { name: 'PMS', extensions: ['pms'] },
+                 */
+            ]
+        }, (files) => {
+            const fileLabel = document.getElementById('bms_style_dirs_label') as HTMLInputElement;
+            fileLabel.value = "";
+            if (files) {
+                files.forEach((file) => {
+                    fileLabel.value += file += ",";
+                });
+            }
+        });
+    }
 });
