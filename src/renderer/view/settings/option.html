@@ -14,35 +14,78 @@
     limitations under the License.
 -->
 
+<link rel="import" href="/bower/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="/bower/paper-radio-button/paper-radio-button.html">
+<link rel="import" href="/bower/paper-slider/paper-slider.html">
+
 <dom-module id="option-element">
     <template>
         <div class="option">
             Option
             <paper-material elevation="2" style="background-color : white;">
                 <paper-menu>
+                    <!--========== Start Window Submenu ==========-->
                     <paper-submenu label="window">
                         <paper-item class="menu-trigger">Window</paper-item>
                         <paper-menu class="menu-content sublist">
-                            <paper-item>Mode</paper-item>
-                            <paper-item>Size</paper-item>
+                            <paper-item>
+                                <paper-item>
+                                    <paper-item-body>
+                                        <div>Mode</div>
+                                        <paper-radio-group selected="window">
+                                            <paper-radio-button name="window">Window</paper-radio-button>
+                                            <paper-radio-button name="fullscreen">Full Screen</paper-radio-button>
+                                        </paper-radio-group>
+                                    </paper-item-body>
+                                </paper-item>
+                            </paper-item>
                         </paper-menu>
                     </paper-submenu>
+                    <!--========== End Window Submenu ==========-->
                 </paper-menu>
                 <paper-menu>
+                    <!--========== Start Sound Submenu ==========-->
                     <paper-submenu label="sound">
                         <paper-item class="menu-trigger">Sound</paper-item>
                         <paper-menu class="menu-content sublist">
-                            <paper-item>Master Volume</paper-item>
-                            <paper-item>Output</paper-item>
+                            <paper-item>
+                                <paper-item>
+                                    <div>Master Volume</div>
+                                    <paper-slider min="0" max="100" value="100"></paper-slider>
+                                </paper-item>
+                            </paper-item>
+                            <paper-item>
+                                <paper-item>
+                                    <paper-item-body>
+                                        <div>Sound Output</div>
+                                        <paper-radio-group selected="webaudio">
+                                            <paper-radio-button name="webaudio">Web Audio</paper-radio-button>
+                                        </paper-radio-group>
+                                    </paper-item-body>
+                                </paper-item>
+                            </paper-item>
                         </paper-menu>
                     </paper-submenu>
+                    <!--============ End Sound Submenu ============-->
                 </paper-menu>
                 <paper-menu>
-                    <paper-submenu label="sound">
+                    <paper-submenu label="others">
                         <paper-item class="menu-trigger">Others</paper-item>
                         <paper-menu class="menu-content sublist">
-                            <paper-item>Input</paper-item>
-                            <paper-item>Key Config</paper-item>
+                            <paper-item>
+                                <paper-item>
+                                    <paper-item-body>
+                                        <div>Input</div>
+                                        <paper-radio-group selected="keyboard">
+                                            <paper-radio-button name="keyboard">Keyboard</paper-radio-button>
+                                            <paper-radio-button name="webmidi">Web Midi</paper-radio-button>
+                                        </paper-radio-group>
+                                    </paper-item-body>
+                                </paper-item>
+                            </paper-item>
+                            <paper-item>
+                                <paper-item><a>Go to Key Config</a></paper-item>
+                            </paper-item>
                         </paper-menu>
                     </paper-submenu>
                 </paper-menu>
