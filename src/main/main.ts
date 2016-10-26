@@ -25,6 +25,8 @@ exapp.use(express.static(path.join(__dirname, '../renderer')));
 
 exapp.use('/system.js', express.static('node_modules/systemjs/dist/system.js'));
 
+exapp.use('/zepto.min.js',express.static('node_modules/zepto/dist/zepto.min.js'));
+
 exapp.use('/bower',express.static('bower_components'));
 
 exapp.use('/api',apiSettings.router);
