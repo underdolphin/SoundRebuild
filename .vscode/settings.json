@@ -8,4 +8,6 @@
             "url": "./src/main/schemas/settings-schema.json"
         }
     ]
+,
+"typescript.tsdk": "./node_modules/typescript/lib"
 }
