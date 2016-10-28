@@ -33,8 +33,8 @@
                                     <paper-item-body>
                                         <div>Mode</div>
                                         <paper-radio-group selected="window">
-                                            <paper-radio-button name="window">Window</paper-radio-button>
-                                            <paper-radio-button name="fullscreen">Full Screen</paper-radio-button>
+                                            <paper-radio-button id="option_window_mode_window" name="window">Window</paper-radio-button>
+                                            <paper-radio-button id="option_window_mode_fullscreen" name="fullscreen">Full Screen</paper-radio-button>
                                         </paper-radio-group>
                                     </paper-item-body>
                                 </paper-item>
@@ -51,7 +51,7 @@
                             <paper-item>
                                 <paper-item>
                                     <div>Master Volume</div>
-                                    <paper-slider min="0" max="100" value="100"></paper-slider>
+                                    <paper-slider id="option_sound_master_volume" min="0" max="100" value="100"></paper-slider>
                                 </paper-item>
                             </paper-item>
                             <paper-item>
@@ -59,7 +59,7 @@
                                     <paper-item-body>
                                         <div>Sound Output</div>
                                         <paper-radio-group selected="webaudio">
-                                            <paper-radio-button name="webaudio">Web Audio</paper-radio-button>
+                                            <paper-radio-button id="option_sound_output_webaudio" name="webaudio">Web Audio</paper-radio-button>
                                         </paper-radio-group>
                                     </paper-item-body>
                                 </paper-item>
@@ -77,8 +77,12 @@
                                     <paper-item-body>
                                         <div>Input</div>
                                         <paper-radio-group selected="keyboard">
-                                            <paper-radio-button name="keyboard">Keyboard</paper-radio-button>
-                                            <paper-radio-button name="webmidi">Web Midi</paper-radio-button>
+                                            <paper-radio-button id="option_others_input_keyboard" name="keyboard">
+                                                Keyboard
+                                            </paper-radio-button>
+                                            <paper-radio-button id="option_others_input_webmidi" name="webmidi">
+                                                Web Midi
+                                            </paper-radio-button>
                                         </paper-radio-group>
                                     </paper-item-body>
                                 </paper-item>
