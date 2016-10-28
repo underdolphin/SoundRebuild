@@ -12,8 +12,6 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
-/// <reference path="typings/index.d.ts" />
-
 const electron = require('electron-connect').server.create();
 const gulp = require('gulp');
 const cleancss = require('gulp-clean-css');
