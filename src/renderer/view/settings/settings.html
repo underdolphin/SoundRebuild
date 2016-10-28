@@ -41,10 +41,11 @@
             }
         </style>
         <div class="layout vertical container">
-            <a href="../player/select.html" id="play">
-                <paper-button raised>Play</paper-button>
-            </a>
-            <user-element id="user"></user-element>
+            <paper-button raised on-click="play">Play</paper-button>
+            <!-- 
+                TODO: now on freeze
+                <user-element id="user"></user-element
+            -->
             <theme-element id="theme"></theme-element>
             <songs-element id="songs"></songs-element>
             <option-element id="option"></option-element>
