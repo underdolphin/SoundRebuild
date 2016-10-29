@@ -13,87 +13,53 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
-<link rel="import" href="/bower/paper-radio-group/paper-radio-group.html">
-<link rel="import" href="/bower/paper-radio-button/paper-radio-button.html">
-<link rel="import" href="/bower/paper-slider/paper-slider.html">
-
 <dom-module id="option-element">
     <template>
         <div class="option">
             Option
-            <paper-material elevation="2" style="background-color : white;">
-                <paper-menu>
+            <section class="mdl-shadow--4dp">
+                <ul class="mdl-list">
                     <!--========== Start Window Submenu ==========-->
-                    <paper-submenu label="window">
-                        <paper-item class="menu-trigger">Window</paper-item>
-                        <paper-menu class="menu-content sublist">
-                            <paper-item>
-                                <paper-item>
-                                    <paper-item-body>
-                                        <div>Mode</div>
-                                        <paper-radio-group selected="window">
-                                            <paper-radio-button id="option_window_mode_window" name="window">Window</paper-radio-button>
-                                            <paper-radio-button id="option_window_mode_fullscreen" name="fullscreen">Full Screen</paper-radio-button>
-                                        </paper-radio-group>
-                                    </paper-item-body>
-                                </paper-item>
-                            </paper-item>
-                        </paper-menu>
-                    </paper-submenu>
-                    <!--========== End Window Submenu ==========-->
-                </paper-menu>
-                <paper-menu>
-                    <!--========== Start Sound Submenu ==========-->
-                    <paper-submenu label="sound">
-                        <paper-item class="menu-trigger">Sound</paper-item>
-                        <paper-menu class="menu-content sublist">
-                            <paper-item>
-                                <paper-item>
-                                    <div>Master Volume</div>
-                                    <paper-slider id="option_sound_master_volume" min="0" max="100" value="100"></paper-slider>
-                                </paper-item>
-                            </paper-item>
-                            <paper-item>
-                                <paper-item>
-                                    <paper-item-body>
-                                        <div>Sound Output</div>
-                                        <paper-radio-group selected="webaudio">
-                                            <paper-radio-button id="option_sound_output_webaudio" name="webaudio">Web Audio</paper-radio-button>
-                                        </paper-radio-group>
-                                    </paper-item-body>
-                                </paper-item>
-                            </paper-item>
-                        </paper-menu>
-                    </paper-submenu>
-                    <!--============ End Sound Submenu ============-->
-                </paper-menu>
-                <paper-menu>
-                    <paper-submenu label="others">
-                        <paper-item class="menu-trigger">Others</paper-item>
-                        <paper-menu class="menu-content sublist">
-                            <paper-item>
-                                <paper-item>
-                                    <paper-item-body>
-                                        <div>Input</div>
-                                        <paper-radio-group selected="keyboard">
-                                            <paper-radio-button id="option_others_input_keyboard" name="keyboard">
-                                                Keyboard
-                                            </paper-radio-button>
-                                            <paper-radio-button id="option_others_input_webmidi" name="webmidi">
-                                                Web Midi
-                                            </paper-radio-button>
-                                        </paper-radio-group>
-                                    </paper-item-body>
-                                </paper-item>
-                            </paper-item>
-                            <paper-item>
-                                <paper-item><a>Go to Key Config</a></paper-item>
-                            </paper-item>
-                        </paper-menu>
-                    </paper-submenu>
-                </paper-menu>
-            </paper-material>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">Window Mode</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="window">
+                            <input type="radio" id="window" class="mdl-radio__button" name="mode" value="1" checked>
+                            <span class="mdl-radio__label">Window</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="fullscreen">
+                            <input type="radio" id="fullscreen" class="mdl-radio__button" name="mode" value="1">
+                            <span class="mdl-radio__label">FullScreen</span>
+                        </label>
+                    </li>
+                    <!--========== End Window Mode ==========-->
+                    <!--========== Start Sound Option ==========-->
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">Master Volume</span>
+                        <input class="mdl-slider mdl-js-slider" type="range" id="option_sound_master_volume" min="0" max="100" value="100">
+                    </li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">Sound Output</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="webaudio">
+                            <input type="radio" id="webaudio" class="mdl-radio__button" name="options" value="1" checked>
+                            <span class="mdl-radio__label">Web Audio</span>
+                    </li>
+                    <!--============ End Sound Option ============-->
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">Input</span>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="keyboard">
+                                <input type="radio" id="keyboard" class="mdl-radio__button" name="input" value="1" checked>
+                                <span class="mdl-radio__label">Keyboard</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="webmidi">
+                            <input type="radio" id="webmidi" class="mdl-radio__button" name="input" value="2">
+                                <span class="mdl-radio__label">Web Midi</span>
+                        </label>
+                    </li>
+                    <li class="mdl-list__item">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Go to Key Config</button>
+                    </li>
+                </ul>
+            </section>
         </div>
     </template>
     <script src="/script/settings/option.js"></script>

@@ -16,38 +16,43 @@
 
 <dom-module id="songs-element">
 	<template>
-		<div class="item">
+		<div class="songs">
 			Songs
-			<paper-material elevation="2" style="background-color : white;">
-				<paper-menu>
-                    <!--========== Start BMS Songs ==========-->
-					<paper-item>
-						<paper-item-body>
-							<div>BMS Songs</div>
-							<paper-item>
-								<paper-input label="Choose Directories" value="" id="bms_style_dirs_label">
-									<paper-icon-button suffix icon="file-upload" id="directorisSelect" on-click="directoriesSelect"></paper-icon-button>
-								</paper-input>
-							</paper-item>
-							<paper-item>
-								<paper-input label="Choose Songs" value="" id="bms_style_songs_label">
-									<paper-icon-button suffix icon="file-upload" id="songsSelect" on-click="songsSelect"></paper-icon-button>
-								</paper-input>
-							</paper-item>
-							<paper-item>
-								<paper-dropdown-menu id="bms_style_songs_encoding" label="File Encoding">
-									<paper-listbox class="dropdown-content">
-										<paper-item>Shift-JIS</paper-item>
-                                        <paper-item>UTF-8</paper-item>
-                                        <paper-item>UTF-16</paper-item>
-									</paper-listbox>
-								</paper-dropdown-menu>
-							</paper-item>
-						</paper-item-body>
-					</paper-item>
-                    <!--========== End BMS Songs ==========-->
-				</paper-menu>
-			</paper-material>
+			<section class="mdl-shadow--4dp">
+				<ul class="mdl-list">
+					<!--========== Start BMS Songs ==========-->
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">BMS Songs Directories</span>
+						<div class="mdl-textfield mdl-js-textfield">
+							<input class="mdl-textfield__input" type="text" id="bms_style_dirs_label">
+						</div>
+						<i class="material-icons" on-click="directoriesSelect">file_upload</i>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">BMS Song Files</span>
+						<div class="mdl-textfield mdl-js-textfield">
+							<input class="mdl-textfield__input" type="text" id="bms_style_songs_label">
+						</div>
+						<i class="material-icons" on-click="songsSelect">file_upload</i>
+					</li>
+					<li class="mdl-list__item">
+						<span class="mdl-list__item-primary-content">BMS Songs Encoding</span>
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="shiftjis">
+                                <input type="radio" id="shiftjis" class="mdl-radio__button" name="bms-encoding" value="1" checked>
+								<span class="mdl-radio__label">Shift-JIS</span>
+						</label>
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="utf8">
+							<input type="radio" id="utf8" class="mdl-radio__button" name="bms-encoding" value="2">
+							UTF-8</span> 
+						</label>
+						<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="utf16">
+							<input type="radio" id="utf16" class="mdl-radio__button" name="bms-encoding" value="3">
+							<span class="mdl-radio__label">UTF-16</span>
+						</label>
+					</li>
+					<!--========== End BMS Songs ==========-->
+				</ul>
+			</section>
 		</div>
 	</template>
 	<script src="/script/settings/songs.js"></script>

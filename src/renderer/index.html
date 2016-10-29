@@ -13,7 +13,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -21,61 +20,42 @@
     <meta charset="UTF-8">
     <title>Sound Rebuild</title>
     <script src="/bower/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="import" href="/bower/iron-icons/iron-icons.html">
-    <link rel="import" href="/bower/paper-header-panel/paper-header-panel.html">
-    <link rel="import" href="/bower/paper-toolbar/paper-toolbar.html">
-    <link rel="import" href="/bower/paper-icon-button/paper-icon-button.html">
-    <link rel="import" href="/bower/paper-drawer-panel/paper-drawer-panel.html">
-    <link rel="import" href="/bower/paper-menu/paper-menu.html">
-    <link rel="import" href="/bower/paper-item/paper-item.html">
+    <link rel="stylesheet" href="/material.min.css">
+    <script src="/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="import" href="./view/settings/settings.html">
     <link rel="stylesheet" href="stylus/main.css">
 </head>
 
 <body unresolve>
-    <paper-drawer-panel force-narrow>
-        <paper-header-panel drawer>
-            <paper-toolbar>
-                <div>Settings</div>
-            </paper-toolbar>
-            <nav>
-                <a class="paper-item-link" href="#user">
-                    <!--
-                        TODO: now on freeze
-                    <paper-item>
-                        User<paper-ripple></paper-ripple>
-                    </paper-item>
-                    -->
-                </a>
-                <a class="paper-item-link" href="#theme">
-                    <paper-item>
-                        Theme<paper-ripple></paper-ripple>
-                    </paper-item>
-                </a>
-                <a class="paper-item-link" href="#songs">
-                    <paper-item>
-                        Songs<paper-ripple></paper-ripple>
-                    </paper-item>
-                </a>
-                <a class="paper-item-link" href="#option">
-                    <paper-item>
-                        Option<paper-ripple></paper-ripple>
-                    </paper-item>
-                </a>
-            </nav>
-        </paper-header-panel>
-        <paper-header-panel main style="background-color:#dddddd;">
-            <paper-toolbar>
-                <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                <span class="title">Settings</span>
-            </paper-toolbar>
-            <div>
-                <settings-element></settings-element>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Settings</span>
+                <!-- Add spacer -->
+                <div class="mdl-layout-spacer"></div>
+                <!--Navigation -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="#theme">Theme</a>
+                    <a class="mdl-navigation__link" href="#songs">Songs</a>
+                    <a class="mdl-navigation__link" href="#option">Option</a>
+                </nav>
             </div>
-        </paper-header-panel>
-    </paper-drawer-panel>
-    <script src="system.js"></script>
-    <script src="script/systemconfig.js"></script>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Settings</span>
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="#theme">Theme</a>
+                <a class="mdl-navigation__link" href="#songs">Songs</a>
+                <a class="mdl-navigation__link" href="#option">Option</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <settings-element></settings-element>
+        </main>
+        <script src="system.js"></script>
+        <script src="script/systemconfig.js"></script>
 </body>
 
 </html>

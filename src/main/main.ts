@@ -22,11 +22,10 @@ const port = 3000;
 import * as apiSettings from './api/settings';
 
 exapp.use(express.static(path.join(__dirname, '../renderer')));
-
 exapp.use('/system.js', express.static('node_modules/systemjs/dist/system.js'));
-
 exapp.use('/zepto.min.js',express.static('node_modules/zepto/dist/zepto.min.js'));
-
+exapp.use('/material.min.css',express.static('node_modules/material-design-lite/material.min.css'));
+exapp.use('/material.min.js',express.static('node_modules/material-design-lite/material.min.js'));
 exapp.use('/bower',express.static('bower_components'));
 
 exapp.use('/api',apiSettings.router);

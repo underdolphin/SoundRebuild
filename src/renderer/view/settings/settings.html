@@ -15,33 +15,16 @@
 -->
 
 <link rel="import" href="/bower/polymer/polymer.html">
-<link rel="import" href="/bower/paper-material/paper-material.html">
-<link rel="import" href="/bower/paper-item/paper-item.html">
-<link rel="import" href="/bower/paper-menu/paper-menu.html">
-<link rel="import" href="/bower/paper-button/paper-button.html">
-<link rel="import" href="./option.html">
-<link rel="import" href="./songs.html">
 <link rel="import" href="./theme.html">
-<link rel="import" href="./user.html">
-<link rel="import" href="/bower/paper-menu/paper-submenu.html">
-<link rel="import" href="/bower/paper-input/paper-input.html">
-<link rel="import" href="/bower/paper-dropdown-menu/paper-dropdown-menu.html">
-<link rel="import" href="/bower/paper-listbox/paper-listbox.html">
+<link rel="import" href="./songs.html">
+<link rel="import" href="./option.html">
 
 <link rel="stylesheet" href="/stylus/settings.css">
 
 <dom-module id="settings-element">
     <template>
-        <style>
-            a {
-                text-decoration: none;
-            }
-            paper-button {
-                background-color : white;
-            }
-        </style>
         <div class="layout vertical container">
-            <paper-button raised on-click="play">Play</paper-button>
+            <button class="mdl-button mdl-js-button mdl-button--raised" on-click="play">Play</button>
             <!-- 
                 TODO: now on freeze
                 <user-element id="user"></user-element
