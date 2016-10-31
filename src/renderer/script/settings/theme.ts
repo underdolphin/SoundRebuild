@@ -26,7 +26,7 @@ Polymer({
             title: 'SelectTheme',
             properties: ['openDirectory']
         }, (dir) => {
-            const fileLabel = document.getElementById('lr2_style_file_label') as HTMLInputElement;
+            const fileLabel = document.getElementById('lr2_style_dir_label') as HTMLInputElement;
             if (dir != undefined) {
                 fileLabel.value = dir[0];
             }
