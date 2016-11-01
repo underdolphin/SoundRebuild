@@ -1,11 +1,5 @@
 // 既定の設定とユーザー設定を上書きするには、このファイル内に設定を挿入します
 {
-    "json.schemas": [{
-        "fileMatch": [
-            "/**/*.settings.json"
-        ],
-        "url": "./src/main/schemas/settings-schema.json"
-    }],
     "typescript.tsdk": "./node_modules/typescript/lib",
     "files.exclude": {
         "**/.git": true,

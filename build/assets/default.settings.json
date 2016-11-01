@@ -1,26 +1,11 @@
 {
-    "theme": {
-        "lr2": {
-            "defaultEncoding": "Shift-JIS"
-        },
-        "resound": {
-            "defaultEncoding": "UTF-16"
-        }
-    },
-    "songs": {
-        "encoding": {
-            "likeBms": "Shift-JIS",
-            "resound": "UTF-8"
-        }
-    },
-    "options": {
-        "windowMode": "window",
-        "windowSize": {
-            "height": 720,
-            "width": 1280
-        },
-        "input": "Keyboard",
-        "output": "WebAudioAPI",
-        "volume": 100
-    }
+    "lr2.directory" : null,
+    "lr2.encodings" : "sjis",
+    "bms.directories" : [],
+    "bms.songs" : [],
+    "bms.encodings" : "sjis",
+    "mode" : "window",
+    "mastervolume" : 100,
+    "output" : "webaudio",
+    "input" : "keyboard"
 }
