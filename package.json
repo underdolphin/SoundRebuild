@@ -35,6 +35,7 @@
     "@types/gulp-typescript": "0.0.32",
     "@types/polymer": "^1.1.28",
     "@types/systemjs": "^0.19.31",
+    "@types/whatwg-fetch": "0.0.32",
     "browser-sync": "^2.17.5",
     "electron": "^1.4.4",
     "electron-connect": "^0.6.0",
