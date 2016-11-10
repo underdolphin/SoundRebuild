@@ -15,11 +15,11 @@
 Polymer({
     is: "settings-element",
     created: () => {
-        let settings: SettingsData = null;
+        let settings = null;
         fetch('/assets/usersettings.json')
             .then((res) => {
                 return res.json();
-            }).then((json: SettingsData) => {
+            }).then((json) => {
                 settings = json;
                 console.log(JSON.stringify(json));
                 setUserSettings(settings);
@@ -79,7 +79,7 @@ class SettingsData {
     input: string = "";
 }
 
-function setUserSettings(userSettings: SettingsData) {
+function setUserSettings(userSettings: any) {
     // get theme elements
     const lr2Directory =
         document.getElementById('lr2_style_dir_label') as HTMLInputElement;
