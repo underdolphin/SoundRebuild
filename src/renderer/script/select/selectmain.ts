@@ -15,6 +15,9 @@
 const minWidth = 960;
 const minHeight = 1080;
 
+const stage = new PIXI.Container();
+const renderer = rendererSetUp();
+
 function resizeMonitor(renderer: PIXI.WebGLRenderer) {
     const body = document.body as HTMLBodyElement;
     window.onresize = async () => {
@@ -33,11 +36,14 @@ function rendererSetUp() {
     return renderer;
 }
 
-function selectmain() {
-    const renderer = rendererSetUp();
-    const stage = new PIXI.Container();
+function gameLoop() {
     renderer.render(stage);
+    requestAnimationFrame(gameLoop);
+}
+
+function selectMain() {
+    gameLoop();
     resizeMonitor(renderer);
 }
 
-selectmain();
+selectMain();
