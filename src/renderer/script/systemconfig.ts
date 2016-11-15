@@ -3,7 +3,8 @@ System.config({
     defaultJSExtensions: true,
     map: {
         settings: 'script/settings',
-        select: 'script/select'
+        select: 'script/select',
+        'pixi.js': '/pixi.min.js'
     },
 });
 
