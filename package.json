@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/body-parser": "0.0.33",
     "@types/clean-css": "^3.4.30",
+    "@types/del": "^2.2.31",
     "@types/electron": "^1.4.26",
     "@types/electron-packager": "^5.1.29",
     "@types/express": "^4.0.33",
@@ -38,6 +39,7 @@
     "@types/systemjs": "^0.19.31",
     "@types/whatwg-fetch": "0.0.32",
     "browser-sync": "^2.17.5",
+    "del": "^2.2.2",
     "electron": "^1.4.5",
     "electron-connect": "^0.6.0",
     "electron-packager": "^8.2.0",
