@@ -20,6 +20,7 @@ const plumber = require('gulp-plumber');
 const stylus = require('gulp-stylus');
 const prettydiff = require('gulp-prettydiff');
 const typescript = require('gulp-typescript');
+const del = require('del');
 
 const project = typescript.createProject('tsconfig.json', {
     typescript: require('typescript')
@@ -90,3 +91,5 @@ gulp.task('reload:renderer', (done) => {
 });
 
 gulp.task("default", ['watch', 'serve']);
+
+gulp.task('clean', del.bind(null,['build/main','build/renderer']));
