@@ -12,6 +12,8 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 
+import * as PIXI from 'pixi.js';
+
 const minWidth = 960;
 const minHeight = 1080;
 
@@ -41,9 +43,9 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
-function selectMain() {
+function playerMain() {
     gameLoop();
     resizeMonitor(renderer);
 }
 
-selectMain();
+playerMain();

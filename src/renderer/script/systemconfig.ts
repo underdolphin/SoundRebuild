@@ -8,4 +8,4 @@ System.config({
     },
 });
 
-System.import('/script/select/selectmain');
+System.import('/script/playermain');
