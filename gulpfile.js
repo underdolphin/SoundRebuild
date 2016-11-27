@@ -22,7 +22,11 @@ const prettydiff = require('gulp-prettydiff');
 const typescript = require('gulp-typescript');
 const del = require('del');
 
-const project = typescript.createProject('tsconfig.json', {
+const mainProject = typescript.createProject('tsconfig.json', {
+    typescript: require('typescript')
+});
+
+const rendererProject = typescript.createProject('tsconfig.json', {
     typescript: require('typescript')
 });
 
@@ -47,7 +51,7 @@ gulp.task('js:main', () => {
 
     gulp.src('src/main/**/*.ts')
         .pipe(plumber())
-        .pipe(project())
+        .pipe(mainProject())
         .pipe(prettydiff({
             lang: 'js',
             mode: 'minify',
@@ -59,7 +63,7 @@ gulp.task('js:renderer', () => {
 
     gulp.src('src/renderer/**/*.ts')
         .pipe(plumber())
-        .pipe(project())
+        .pipe(rendererProject())
         .pipe(prettydiff({
             lang: 'js',
             mode: 'minify',
@@ -93,3 +97,5 @@ gulp.task('reload:renderer', (done) => {
 gulp.task("default", ['watch', 'serve']);
 
 gulp.task('clean', del.bind(null,['build/main','build/renderer']));
+
+gulp.task('build',['html','css','js:main','js:renderer']);
