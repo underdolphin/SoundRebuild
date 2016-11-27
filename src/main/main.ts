@@ -26,7 +26,7 @@ exapp.use('/material.min.css',express.static('node_modules/material-design-lite/
 exapp.use('/material.min.js',express.static('node_modules/material-design-lite/material.min.js'));
 exapp.use('/bower',express.static('bower_components'));
 exapp.use('/assets',express.static('build/assets'));
-exapp.use('/pixi.min.js',express.static('node_modules/pixi.js/bin/pixi.min.js'));
+exapp.use('/pixi.min.js',express.static('node_modules/pixi.js/dist/pixi.min.js'));
 
 let server = exapp.listen(port, () => {
     console.log(`app listening`);
