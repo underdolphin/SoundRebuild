@@ -63,7 +63,7 @@ Polymer({
 
         saveSettings(data);
 
-        location.href = "/view/select.html";
+        location.href = "/view/player.html";
     }
 });
 
