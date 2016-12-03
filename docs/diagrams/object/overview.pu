@@ -1,0 +1,15 @@
+@startuml
+title Overview
+object User
+object Settings
+object PlayOptions
+object Select
+object Play
+object Result
+
+User -- Settings : Change settings
+User -- Select : Select from songs list
+User -- PlayOptions : Select play option
+User -- Play : Play selected the song
+User -- Result : Check the play result
+@enduml
