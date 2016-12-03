@@ -4,9 +4,7 @@ object Play
 object User
 object PlayResult
 object SongMetadata
-object SongBodyData {
-
-}
+object SongBodyData
 object PlayThemeData
 
 User -- Play : Playing

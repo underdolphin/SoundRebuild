@@ -1,5 +1,7 @@
 @startuml
 object Select
+object SelectThemeData
+object SongDecision
 object SongsList {
     songHierarchy = "Top"
     songTitle = ""
@@ -25,6 +27,7 @@ object SongMetadata {
 }
 
 Select -- SongsList : Display to screen songs list
-Select -- SongMetadata : Display to screen basic information of songs
+Select -- SongMetadata : Display to screen basic \n information of songs
 SongsList -- SongMetadata : Create songs list
+Select -- SelectThemeData : Applying select view theme
 @enduml
