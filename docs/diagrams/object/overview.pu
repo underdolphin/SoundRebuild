@@ -1,17 +1,50 @@
 @startuml
 title Overview
 object User
-object ThemeData
-object Settings
-object PlayOptions
-object Select
-object Play
-object Result {
-    Achievement
+object Settings {
+    selectPlayMode
+    selectPlaySide
+}
+object PlayOptions {
+    scoreGraphList
+    selectGraphList
+    scoreStyleList
+    selectScoreStyle
+    groupGaugeList
+    selectGuageStyle
+    assistPlayList
+    selectAssistPlay
+    displayAreaList
+    selectDisplayArea
 }
 
+object Select {
+    selectSongTitle
+    selectDifficulty
+}
+object SongsList {
+    songHierarchy
+    songTitle
+    songDifficuly
+    songFileName
+}
+
+object Play {
+    timingJudgement()
+    playScore
+    playTime
+    playMode
+}
+object Controller {
+    pushKey(event)
+}
+
+object Result
+Play -- Controller : Hold which key pushed
+Select -- SongsList : Display to screen songs list
+
 User -- Settings : Change settings
-User -- Select : Select from songs list
+User -- Select : Select play song and difficulty
 User -- PlayOptions : Select play option
 User -- Play : Play selected the song
 User -- Result : Check the play result
