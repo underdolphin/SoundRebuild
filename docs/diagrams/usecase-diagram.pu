@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor User
+actor App
+
+rectangle Re:sound {
+    User --> (Change settings)
+    User --> (Select play song and difficulty)
+    User --> (Select play option)
+    User --> (Start game play)
+    (Timing Judgement) <-- App
+    (record for corresponding score) <-- App
+    (Display result) <-- App
+}
+@enduml
