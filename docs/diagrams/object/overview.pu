@@ -15,9 +15,4 @@ User -- Select : Select from songs list
 User -- PlayOptions : Select play option
 User -- Play : Play selected the song
 User -- Result : Check the play result
-
-PlayOptions -- ThemeData : Applying play options theme
-Select -- ThemeData : Applying select view theme
-Play -- ThemeData : Applying play view theme
-Result -- ThemeData : Applying result view theme
 @enduml

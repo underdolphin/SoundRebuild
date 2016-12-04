@@ -10,6 +10,5 @@ object PlayThemeData
 User -- Play : Playing
 Play -- PlayResult : Record result
 Play -- SongBodyData : Create song score
-PlayThemeData -- Play : Applying play view theme
 Play -- SongMetadata : Display to screen basic \n information of songs, \n get BPM, and so on
 @enduml
